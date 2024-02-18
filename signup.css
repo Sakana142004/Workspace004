@@ -1,0 +1,42 @@
+.sign-up{
+     align-items: center;
+     background-color: rgb(255, 255, 255);
+     display: grid;
+     grid-template-columns: 1fr;
+     row-gap: 20px;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: inset -0.5px -2px 4px 1px rgba(0,0,0,0.18);
+     margin-right: 200px;
+  
+ }
+ .signup-text{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 29px;
+      font-weight: bold;
+ }
+ .mail,.pwd,.username{
+     font-size: 18px;
+     padding-left :40px;
+     padding-right: 40px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     outline: none;
+     border-radius: 20px;
+ }
+ .show-pass{
+     margin-left: 8px;
+ }
+ .signup-send{
+         padding-top: 10px;
+         padding-bottom: 10px;
+         padding-left : 90px;
+         padding-right: 90px;
+         border-radius: 20px;
+         border: none;
+         background-color: rgb(10, 102, 194);
+         font-size: medium;
+         color: white;
+         cursor: pointer;
+ }

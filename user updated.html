@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <style>
+        .multiple-images{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .image{
+            position: relative;
+            width: 350px;
+            display: inline-block;
+            margin-left: 10px;
+            }
+            .image__img{
+                width: 350px;
+                height: 250px;
+                object-fit: fill;
+            }
+            .image__overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.6);
+                color:#ffffff;
+                display: flex;
+                font-family:'Quicksand',sans-serif;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+            }
+            .image__overlay--blur{
+                backdrop-filter: blur(3px);
+            } 
+            .image__overlay >*{
+              transform: translateY(20px);
+              transition: transform 0.25s;
+            }
+            .image__overlay:hover >*{
+                transform: translateY(0);
+            }
+            .image__overlay:hover{
+              opacity: 1;
+              transition: opacity 0.25s;
+
+            }
+            .image__title{
+                font-size: 1.25em;
+                margin-top :0.25em;
+            }
+            .image-description{
+                margin-left: 10px;
+                font-family: sans-serif;
+            }
+        .welcome{
+            font-size: 70px;
+            color: black;
+            margin-left: 500px;
+        }
+        .loc{
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left : 90px;
+                padding-right: 90px;
+                border-radius: 30px;
+                border: none;
+                background-color: rgb(10, 102, 194);
+                font-size: medium;
+                color: white;
+                cursor: pointer;
+                margin-left: 500px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+        }
+        .submit{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left : 90px;
+                padding-right: 90px;
+                border-radius: 20px;
+                border: none;
+                background-color: rgb(10, 102, 194);
+                font-size: medium;
+                color: white;
+                cursor: pointer;
+                display: inline-block;
+                margin-left: 600px;
+                margin-top: 10px;
+            }
+            .soil-check{
+                width: 30px;
+            }
+     </style>
+    </head>
+    <body>
+            <div class="welcome">Welcome farmer !</div>
+            <div><button class="loc">Get your loaction</button></div>
+            <div class="mutiple-images">
+                <div class="image">
+                    <img class="image__img" src="soil-images/Alluvial-Soil..png" alt="Alluvial-Soil">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Alluvial soil</div>
+                        <p class="image__description">A fine-grained fertile soil deposited by water flowing over flood plains or in river beds.</p>
+                        <input class="soil-check" type="checkbox" name = "soil" value="Alluvial soil">
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="image__img" src="soil-images/blacksoil.jpg" alt="Alluvial-Soil">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Black Soil</div>
+                        <p class="image__description">Black soils are mineral soils enriched with organic carbon</p>
+                        <input class="soil-check" type="checkbox" name = "soil" value="Black soil">
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="image__img" src="soil-images/desertSoil.jpeg" alt="Alluvial-Soil">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Desert Soil</div>
+                        <p class="image__description">Desert soil is mostly sandy infertile soil (90–95%) found in low-rainfall regions</p>
+                        <input class="soil-check" type="checkbox" name = "soil" value="Desert soil">
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="image__img" src="soil-images/forestSoil.jpeg" alt="Alluvial-Soil">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Forest soil</div>
+                        <p class="image__description">Forest soils are generally very acidic and organic, with limited chemical fertility</p>
+                        <input class="soil-check" type="checkbox" name = "soil" value="Forest soil">
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="image__img" src="soil-images/LateriteSoil.jpg" alt="Alluvial-Soil">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Laterite Soil</div>
+                        <p class="image__description">Laterite soil is reddish to yellow in color with a lower content of NPK with 90-100% Fe, Al &Ti</p>
+                        <input class="soil-check" type="checkbox" name = "soil" value="Laterite soil">
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="image__img" src="soil-images/redYellowsoil.jpg" alt="Alluvial-Soil">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Red Yellowsoil</div>
+                        <p class="image__description">This soil is made up of such acidic rocks as granite, gneiss, and schist.</p>
+                        <input class="soil-check" type="checkbox" name = "soil" value="Red yellow soil">
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="image__img" src="soil-images/Saline-Soil.jpg" alt="Alluvial-Soil">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Saline soil</div>
+                        <p class="image__description">Saline soils contain large amounts of water-soluble salts that inhibit seed germination and plant growth.</p>
+                        <input class="soil-check" type="checkbox" name="soil" value="Saline soil">
+                    </div>
+                </div>
+                <div class="image">
+                    <input class="image__img" type="image" src="soil-images/Alluvial-Soil..png">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Peaty Marshy Soil</div>
+                        <p class="image__description"></p>
+                        <input class="soil-check" type="checkbox" name = "soil" value="peaty-marshy-soil">
+                    </div>
+                </div>
+            </div>
+            <div>
+            <a class="submit" href="http://127.0.0.1:5500/page2/success.html" target="_blank">Submit</a>
+            </div>
+            <script src="location.js"></script>
+            <script>
+                formControlCheckbox = [...document.querySelectorAll('.soil-check')];
+                formControlCheckbox.forEach((onebyone)=>{
+                    onebyone.addEventListener('click',function(){
+                        formControlCheckbox.forEach((onebyone)=>{
+                            onebyone.checked = false;
+                        })
+                        onebyone.checked = true;
+                    })
+                })
+               </script>
+    </body>
+</html>
